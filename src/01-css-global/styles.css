@@ -1,0 +1,105 @@
+/* 1. Reset Básico e Definição de Tokens */
+:root {
+  /* Tokens de Cor (Tema Claro - Padrão) */
+  --color-background: #dcc9a9;
+  --color-text: #2a2a2a;
+  --color-primary: #b83a2d;
+  --color-secondary: #4e6851;
+  --color-surface: #c9b696;
+  --color-white: #ffffff;
+  --color-black: #1c1c1c;
+
+  /* Tokens de Espaçamento */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Tokens de Sombra (sutil para o tema claro) */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  
+  /* Outros Tokens */
+  --border-radius: 8px;
+  --transition-duration: 200ms;
+}
+
+/* 2. Definição do Tema Escuro */
+[data-theme='dark'] {
+  --color-background: #1c1c1c;
+  --color-text: #dcc9a9;
+  --color-primary: #b83a2d;
+  --color-secondary: #4e6851;
+  --color-surface: #2f2f2f;
+
+  /* Sombras adaptadas para o tema escuro */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.25), 0 2px 4px -2px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.25), 0 4px 6px -4px rgba(0, 0, 0, 0.25);
+}
+
+/* 3. Estilos Globais */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.5;
+  transition: background-color var(--transition-duration), color var(--transition-duration);
+}
+
+/* 4. Layout da Aplicação */
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+.product-grid {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  
+  /* Padrão (Mobile): 1 coluna */
+  grid-template-columns: 1fr;
+}
+
+/* Breakpoints para o grid responsivo */
+
+/* Tablet pequeno (≥ 481px): 2 colunas */
+@media (min-width: 481px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet (≥ 769px): 3 colunas */
+@media (min-width: 769px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop (≥ 1025px): 4 colunas */
+@media (min-width: 1025px) {
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* No seletor .app-container, adicione a propriedade padding-top */
+.app-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  padding-top: 100px; /* Espaço para a navbar fixa */
+}

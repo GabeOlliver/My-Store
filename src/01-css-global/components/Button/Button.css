@@ -1,0 +1,117 @@
+.btn {
+  /* Base */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  
+  /* Animação */
+  transition: background-color var(--transition-duration), color var(--transition-duration), border-color var(--transition-duration), opacity var(--transition-duration);
+}
+
+/* Variante Solid (Padrão) */
+.btn-solid {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-solid:hover {
+  background-color: var(--color-secondary); /* Apenas para dar um efeito diferente */
+}
+
+/* Variante Outline */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Variante Ghost */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+.btn {
+  /* Base */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  cursor: pointer;
+  
+  /* Animação */
+  transition: background-color var(--transition-duration), color var(--transition-duration), border-color var(--transition-duration), opacity var(--transition-duration);
+}
+
+/* Variante Solid (Padrão) */
+.btn-solid {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-solid:hover {
+  background-color: var(--color-secondary); /* Apenas para dar um efeito diferente */
+}
+
+/* Variante Outline */
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* Variante Ghost */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-surface);
+}
+
+/* Estados */
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn-ghost:hover {
+  background-color: var(--color-surface);
+}
+
+/* Estados */
+.btn:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

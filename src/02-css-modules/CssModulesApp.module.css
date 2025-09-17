@@ -1,0 +1,30 @@
+.appContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+  padding-top: 100px; /* Espaço para a navbar fixa */
+}
+
+.productGrid {
+  display: grid;
+  gap: var(--space-lg);
+  margin-top: var(--space-lg);
+  grid-template-columns: 1fr; /* Mobile-first: 1 coluna */
+}
+
+/* Breakpoints */
+@media (min-width: 481px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 769px) {
+  .productGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1025px) {
+  .productGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
