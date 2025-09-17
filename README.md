@@ -1,12 +1,43 @@
-# React + Vite
+# Comparativo de Estilização em React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto que implementa a mesma interface com 4 técnicas de estilização diferentes em React para fins de comparação.
 
-Currently, two official plugins are available:
+## Abordagens Implementadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **01-css-global**: CSS Global com Variáveis.
+* **02-css-modules**: CSS Modules para estilos com escopo local.
+* **03-tailwind**: Tailwind CSS (Utility-First).
+* **04-styled-components**: Styled Components (CSS-in-JS).
 
-## Expanding the ESLint configuration
+## Como Rodar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1.  **Instalar dependências:**
+    ```bash
+    npm install
+    ```
+
+2.  **Iniciar o servidor:**
+    ```bash
+    npm run dev
+    ```
+
+## Como Alternar as Versões
+
+Edite o arquivo `src/main.jsx` para importar e renderizar o componente da versão desejada:
+
+* `CssGlobalApp`
+* `CssModulesApp`
+* `TailwindApp`
+* `StyledComponentsApp`
+
+**Exemplo para a versão CSS Global:**
+```jsx
+// src/main.jsx
+import CssGlobalApp from './01-css-global/CssGlobalApp';
+
+// ...
+root.render(
+  <React.StrictMode>
+    <CssGlobalApp />
+  </React.StrictMode>
+);
